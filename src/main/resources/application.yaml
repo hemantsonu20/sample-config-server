@@ -1,0 +1,22 @@
+server:
+  port: 8888
+  
+management:
+  security:
+    enabled: false
+    
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${HOME}/git/sample-config-source
+          clone-on-restart: false
+          searchPaths: common
+          #repos:
+           # dev:
+            #  pattern: "*/dev"
+             # searchPaths: dev,common
+              #uri: ${HOME}/git/sample-config-source
+              #clone-on-restart: true
+          
